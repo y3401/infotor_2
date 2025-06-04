@@ -1,8 +1,7 @@
 ﻿#
-/pdf/*.pdf
-/DB/*
+/DB/*.db3
+/DB/*.sqlite
 __pycache__
 dist
 build
-/in/*
 param.pkl
