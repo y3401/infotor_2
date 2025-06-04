@@ -1,0 +1,8 @@
+﻿#
+/pdf/*.pdf
+/DB/*
+__pycache__
+dist
+build
+/in/*
+param.pkl

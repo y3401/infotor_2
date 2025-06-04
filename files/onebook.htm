@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <title></title>
+ <meta name="description" content="Книжный трекер">
+ <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="stylesheet" href="./files/book.css" type="text/css">
+  <script type="text/javascript" src="./files/jquery.min.js"></script>
+</head>
+
+<body>
+ <link rel="stylesheet" type="text/css" href="./files/highslide.css">
+ <script type="text/javascript">
+  var postImg_MaxWidth = screen.width - 202;
+  var postImgAligned_MaxWidth = Math.round(screen.width/3);
+  var attachImg_MaxWidth = screen.width - 280;
+  var ExternalLinks_InNewWindow = '';
+  var hidePostImg = false;
+
+  function initPostBBCode(context)
+  {
+  	initSpoilers(context);
+  	initExternalLinks(context);
+  	initPostImages(context);	
+  }
+  function initPostImages(context)
+  {
+  	var context = context || 'body';
+  	if (hidePostImg) return;
+  	var $in_spoilers = $('div.sp-body var.postImg', context);
+  	$('var.postImg', context).not($in_spoilers).each(function(){
+  		var $v = $(this);
+  		var src = $v.attr('title');
+  		var $img = $('<img src="'+ src +'" class="'+ $v.attr('className') +'" alt="pic" />');
+  		//$img = fixPostImage($img);
+  		var maxW = ($v.hasClass('postImgAligned')) ? postImgAligned_MaxWidth : postImg_MaxWidth;
+  		$img.bind('click', function(){ return imgFit(this, maxW); });
+  		if (user.opt_js.i_aft_l) {
+  			$('#preload').append($img);
+  			var loading_icon = '<a href="'+ src +'" target="_blank"><img src="images/pic_loading.gif" alt="" /></a>';
+  			$v.html(loading_icon);
+  			if ($.browser.msie) {
+  				$v.after('<wbr>');
+  			}
+  			$img.one('load', function(){
+  				imgFit(this, maxW);
+  				$v.empty().append(this);
+  			});
+  		}
+  		else {
+  			$img.one('load', function(){ imgFit(this, maxW) });
+  			$v.empty().append($img);
+  			if ($.browser.msie) {
+  				$v.after('<wbr>');
+  			}
+  		}
+  	});
+  }
+	function initSpoilers(context)
+	{
+	$('div.sp-body', context).each(function(){
+		var $sp_body = $(this);
+		var name = this.title || 'скрытый текст';
+		this.title = '';
+		$('<div class="sp-head folded clickable">'+ name +'</div>').insertBefore($sp_body).click(function(e){
+			if (!$sp_body.hasClass('inited')) {
+				initPostImages($sp_body);
+				$sp_body.prepend('<div class="clear"></div>').append('<div class="clear"></div>').addClass('inited');
+				$sp_body.after('<div class="sp-head clickable unfolded"  style="display:none" onclick="spoilerHide($(this));">Закрыть</div>');
+			}
+			if (e.shiftKey) {
+				e.stopPropagation();
+				e.shiftKey = false;
+				var fold = $(this).hasClass('unfolded');
+				$('div.sp-head', $($sp_body.parents('td')[0])).filter( function(){ return $(this).hasClass('unfolded') ? fold : !fold } ).click();
+			}
+			else {
+				$(this).toggleClass('unfolded');
+				$sp_body.slideToggle('fast');
+				$sp_body.next().slideToggle('fast');
+			}
+		});
+	});
+	}
+	function spoilerHide($sp_body) 
+	{
+	    if ($(document).scrollTop() > $sp_body.prev().offset().top) {
+	        $(document).scrollTop($sp_body.prev().offset().top - 200);
+	    }
+	   $sp_body.slideToggle('fast');
+	    $sp_body.prev().slideToggle('fast');
+	    $sp_body.prev().prev().toggleClass('unfolded');
+	}
+
+  $(document).ready(function(){
+  	$('div.post_wrap, div.signature').each(function(){ initPostBBCode( $(this) ) });
+  });
+ </script>
+
+<div id="body_container">
+
+<!--page_container-->
+<div id="page_container">
+<a name="top"></a>
+
+<!--page_header-->
+<div id="page_header">
+
+<!--main_nav-->
+<div id="main-nav" style="height: 17px;">
+	<table width="100%" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td class="nowrap">
+			<a href="#"><b>Главная</b></a>·
+
+			<a href="#"><b>Трекер</b></a>·
+			<a href="#"><b>Поиск</b></a>·
+			<a href="#"><b>RSS</b></a>·
+			<a href="#"><b>Правила</b></a>·
+			<a href="#"><b>FAQ</b></a>·
+			<a href="#"><b>Группы</b></a>·
+			<a href="#"><b>Пользователи</b></a> ·
+			<a href="#"><b>«Буквица»</b></a>
+
+		</td>
+	</tr>
+	</tbody></table>
+</div>
+<!--/main_nav-->
+
+<!--logo-->
+<div id="logo">
+<table width="100%">
+  <tbody><tr>
+    <td>
+	<a href="#"><img src="./files/logo-bt.png" border="0" alt="Главная" vspace="1"></a>
+    </td>
+    <td>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+<!--/logo-->
+
+<div class="topmenu">
+   <table width="100%" cellpadding="0" cellspacing="0" height="20px">
+   <tbody><tr>
+      
+            <td class="tCenter pad_2">
+      </td>
+         </tr>
+   </tbody></table>
+</div>
+</div>
+<!--/page_header-->
+
+<!--page_content-->
+<div id="page_content">
+
+<!--main_content-->
+</div>
+</body></html>

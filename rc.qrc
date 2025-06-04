@@ -1,0 +1,31 @@
+<RCC>
+  <qresource prefix="files">
+    <file>img/browser_pixel_icon_123698.png</file>
+    <file>img/browser-window_icon-icons.com_71731.png</file>
+    <file>img/internet_browser_icon_124066.png</file>
+    <file>img/receive.png</file>
+    <file>img/transaction0.png</file>
+    <file>img/zoomminus.png</file>
+    <file>img/zoomplus.png</file>
+    <file>img/disk.png</file>
+    <file>img/download15.png</file>
+    <file>img/open.png</file>
+    <file>img/left.png</file>
+    <file>img/printer.png</file>
+    <file>img/info.png</file>
+    <file>img/quit.png</file>
+    <file>img/up.png</file>
+    <file>img/configure.png</file>
+    <file>img/favicon.png</file>
+    <file>img/editpaste.png</file>
+    <file>img/remove.png</file>
+    <file>img/search.png</file>
+    <file>img/right.png</file>
+    <file>img/addlist.png</file>
+    <file>img/removelist.png</file>
+    <file>img/bookmark_g.png</file>
+    <file>img/bookmark.png</file>
+    <file>files/magnet_1.svg</file>
+    <file>files/info_1.svg</file>
+  </qresource>
+</RCC>

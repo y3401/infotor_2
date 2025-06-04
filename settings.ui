@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Settings</class>
+ <widget class="QDialog" name="Settings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>460</width>
+    <height>265</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>460</width>
+    <height>265</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>460</width>
+    <height>265</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>460</width>
+    <height>485</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Настройки программы</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>files/configure.png</normaloff>files/configure.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <widget class="QGroupBox" name="Base1">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>9</y>
+     <width>441</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>1. Infotor-2</string>
+   </property>
+   <widget class="QLineEdit" name="path10">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>30</y>
+      <width>311</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 189, 190);</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="path11">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>60</y>
+      <width>311</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Основная</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>47</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Контент</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="sel10">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>30</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Выберите файл БД</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>files/open.png</normaloff>files/open.png</iconset>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="sel11">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>60</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Выберите файл БД</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>files/open.png</normaloff>files/open.png</iconset>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="conv1">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>30</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Преобразовать в нужный формат</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>files/configure.png</normaloff>files/configure.png</iconset>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cbHideDel">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>90</y>
+      <width>151</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Скрывать удаленные</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="Base2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>441</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>2. &quot;База раздач с комментариями&quot;</string>
+   </property>
+   <widget class="QLineEdit" name="path20">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>30</y>
+      <width>311</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="path21">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>60</y>
+      <width>311</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Основная</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Контент</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="sel20">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>30</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Выберите файл БД</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>files/open.png</normaloff>files/open.png</iconset>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="sel21">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>60</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Выберите файл БД</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>files/open.png</normaloff>files/open.png</iconset>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="conv2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>30</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Преобразовать в нужный формат</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>files/configure.png</normaloff>files/configure.png</iconset>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="bSave">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>230</y>
+     <width>80</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bCancel">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>230</y>
+     <width>80</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Отмена</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>bCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>Settings</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>409</x>
+     <y>441</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>231</x>
+     <y>235</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

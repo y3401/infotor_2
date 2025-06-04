@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1056</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Local BD</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>img/favicon.png</normaloff>img/favicon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>3</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>720</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>720</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="statusTip">
+            <string/>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::WinPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <widget class="QLineEdit" name="keyWords">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>581</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>450</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="maxLength">
+             <number>120</number>
+            </property>
+            <property name="placeholderText">
+             <string>Ключевые слова для поиска</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="bClean">
+            <property name="geometry">
+             <rect>
+              <x>590</x>
+              <y>6</y>
+              <width>16</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>img/remove.png</normaloff>img/remove.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="shortcut">
+             <string>Del</string>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="selRazdel">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>40</y>
+              <width>221</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>400</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>Разделы</string>
+            </property>
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 127);</string>
+            </property>
+            <property name="currentText">
+             <string/>
+            </property>
+            <property name="currentIndex">
+             <number>-1</number>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+            </property>
+            <property name="minimumContentsLength">
+             <number>1</number>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+            <property name="duplicatesEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="bSearch">
+            <property name="geometry">
+             <rect>
+              <x>610</x>
+              <y>9</y>
+              <width>101</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Поиск</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="selForum">
+            <property name="geometry">
+             <rect>
+              <x>240</x>
+              <y>40</y>
+              <width>351</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Форумы</string>
+            </property>
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 127);</string>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QTableWidget" name="tableWidget">
+        <property name="minimumSize">
+         <size>
+          <width>350</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>400</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>table</string>
+        </property>
+        <property name="statusTip">
+         <string/>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::NoSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <property name="showGrid">
+         <bool>true</bool>
+        </property>
+        <property name="gridStyle">
+         <enum>Qt::SolidLine</enum>
+        </property>
+        <property name="sortingEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="cornerButtonEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>6</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>30</number>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>25</number>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTreeWidget" name="treeWidget">
+        <property name="toolTip">
+         <string>Tree1</string>
+        </property>
+        <property name="toolTipDuration">
+         <number>2</number>
+        </property>
+        <property name="statusTip">
+         <string/>
+        </property>
+        <property name="uniformRowHeights">
+         <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="columnCount">
+         <number>2</number>
+        </property>
+        <attribute name="headerVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string notr="true">1</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string notr="true">2</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1056</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAction">
+    <property name="title">
+     <string>Action</string>
+    </property>
+    <addaction name="actionUpdate"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionFAQ"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuAction"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <action name="actionUpdate">
+   <property name="icon">
+    <iconset>
+     <normaloff>img/receive.png</normaloff>img/receive.png</iconset>
+   </property>
+   <property name="text">
+    <string>Update</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset>
+     <normaloff>img/quit.png</normaloff>img/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionFAQ">
+   <property name="icon">
+    <iconset>
+     <normaloff>img/transaction0.png</normaloff>img/transaction0.png</iconset>
+   </property>
+   <property name="text">
+    <string>FAQ</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset>
+     <normaloff>img/info.png</normaloff>img/info.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>keyWords</tabstop>
+  <tabstop>selRazdel</tabstop>
+  <tabstop>selForum</tabstop>
+  <tabstop>bSearch</tabstop>
+  <tabstop>bClean</tabstop>
+  <tabstop>tableWidget</tabstop>
+  <tabstop>treeWidget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>bClean</sender>
+   <signal>clicked()</signal>
+   <receiver>keyWords</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>600</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>367</x>
+     <y>42</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>527</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

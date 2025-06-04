@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Main Title">
+<meta name="robots" content="nofollow">
+<title>Локальная база RuTracker.org</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="files/favicon.png" type="image/x-icon">
+<script>
+window.BB = {
+	cur_domain: location.hostname.replace(/.*?(([a-z0-9-]+\.){1,2}[a-z0-9-]+)$/, '$1'),
+	form_token: '7d362d0e44ae5e9ca61c3b8f72ebaa12',
+	opt_js: {"only_new":0,"h_flag":0,"h_av":0,"h_rnk_i":0,"h_post_i":0,"h_smile":0,"h_sig":0,"sp_op":0,"tr_tm":0,"h_cat":"","h_tsp":0,"h_ta":66},
+
+	IS_GUEST: !!'',
+	IMG_URL: 'https://static.rutracker.cc/templates/v1/images',
+	SMILES_URL: 'https://static.rutracker.cc/smiles',
+	//catId: 28,
+//	FORUM_ID: 2475,
+//	parentForumId: 1392,
+//		COOKIE_MARK: 'bb_mark_read',
+	};
+//BB.cookie_defaults = {
+//	domain: '.' + BB.cur_domain,
+//	path: "/forum/",
+//};
+</script>
+<link href="../files/1css.css" rel="stylesheet">
+<script src="../files/1js.js"></script>
+<script src="../files/2js.js"></script>
+<style>
+.invisible-el {
+	/* @include element-invisible(); */
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+}
+.hidden, .menu-sub, #ajax-loading, #ajax-error, var.ajax-params, #modal-blocker, .q-post {
+	display: none;
+}
+/**/
+/* temp */
+/* temp end */
+</style>
+<noscript>
+	<style>
+	.sp-body {
+		display: block; /* for bots */
+	}
+	</style>
+</noscript>
+</head>
+<body class="" style="">
+<div id="invisible-heap" class="invisible-el"></div>
+<div id="preload" class="invisible-el"></div>
+<div id="body_container">
+<div id="page_container">
+<div id="page_header" class="hide-for-print">
+<div id="main-nav" class="site-nav clearfix">
+<ul class="inlined middot-separated floatL">
+<li>
+<a><b>Главная</b></a>
+</li>
+<li>
+<span class="menu-split">
+<a rel="nofollow"><b>Трекер</b></a>
+<a href="#tr-menu" class="menu-root">
+<img src="https://static.rutracker.cc/templates/v1/images/menu_arrow_1.svg" alt="v">
+</a>
+</span>
+</li>
+<li>
+<a rel="nofollow"><b>Поиск</b></a>
+</li>
+<li>
+ <a rel="nofollow"><b>Группы</b></a>
+</li>
+<li>
+<a target="_blank"><b>FAQ</b></a>
+</li>
+<li>
+<a style="color: #7b1fa2;"><b>Tor</b></a>
+</li>
+<li>
+<a style="color: #7b1fa2;"><b>VPN</b></a>
+</li>
+<li>
+<a><b style="color: #384aaa;">Правила</b></a>
+</li>
+</ul>
+</div>
+
+<div class="menu-sub" id="tr-menu">
+<div class="menu-a bold nowrap">
+</div>
+</div>
+<div id="logo">
+<table style="height: 112px;">
+<tr>
+<td id="logo-td" style="padding: 3px 7px 3px 15px;">
+<a class="site-logo-link">
+<img class="site-logo" src="../files/logo-3.svg" style="" alt="logo">
+</a>
+</td>
+<td class="tCenter w100" style="padding: 6px 10px 0 3px;">
+<style>
+
+#bn-top-block {
+	display: none;
+	width: 1px;
+	/* min-width: JS */
+	margin: 0 auto;
+	overflow: hidden;
+}
+</style>
+<script>
+$(function () {
+	var $block = $('#bn-top-block');
+	var logoWidth = Math.max($('#logo-td').width(), 250);
+	var frameWidth = Math.min($(window).width() - logoWidth - 50, $block.data('max_width'));
+	$block.find('img').css({
+		'max-width': frameWidth + 'px',
+	});
+	$block.css({
+		'min-width': frameWidth + 'px',
+		display: 'inline-block',
+	});
+});
+</script>
+<div style="padding: 6px;">
+<iframe id="bn-top-block" data-max_width="900" src="https://rutrk.org/bn/sk/14/index.html" height="90" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"></iframe>
+</div>
+</td>
+</tr>
+</table>
+</div>  
+
+<div class="topmenu">
+<table class="w100">
+<tr>
+<td class="w50">
+<span class="top-menu-username-wrap">
+<img class="log-out-icon" src="https://static.rutracker.cc/templates/v1/images/logout_1.png" alt="" title="Выход">
+<a id="logged-in-username" class="truncated-text" >Ваш никнейм</a>
+</span>
+</td>
+<td class="tCenter pad_2 nowrap">
+</td>
+<td class="tRight w50 nowrap">
+<div>
+<ul class="inlined top-menus">
+<li>
+<span class="menu-split">
+<a class="">
+ЛС &#x2709; </a>
+<a href="#pms-menu" class="menu-root" data-hide_el_id="bn-top-right">
+<img src="https://static.rutracker.cc/templates/v1/images/menu_arrow_1.svg" alt="v">
+</a>
+</span>
+</li>
+<li>
+<span class="menu-split">
+<a>Профиль</a>
+<a href="#profile-menu" class="menu-root" data-hide_el_id="bn-top-right">
+<img src="https://static.rutracker.cc/templates/v1/images/menu_arrow_1.svg" alt="v">
+</a>
+</span>
+</li>
+<li>
+<span class="menu-split">
+<a>Мои сообщения</a>
+<a href="#my-posts-menu" class="menu-root" data-hide_el_id="bn-top-right">
+<img src="https://static.rutracker.cc/templates/v1/images/menu_arrow_1.svg" alt="v">
+</a>
+</span>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="pms-menu" class="menu-sub">
+<div class="menu-a bold nowrap">
+<a class="med">Входящие</a>
+<a class="med">Исходящие</a>
+<a class="med">Отправленные</a>
+<a class="med">Сохранённые</a>
+</div>
+</div>
+<div id="profile-menu" class="menu-sub">
+<div class="menu-a bold nowrap">
+<a class="med">Настройки</a>
+<a class="med">Будущие закачки</a>
+<a class="med">Избранное</a>
+</div>
+</div>
+<div id="my-posts-menu" class="menu-sub">
+<div class="menu-a bold nowrap">
+<a class="med">Мои раздачи</a>
+<a class="med topics-started">Начатые темы</a>
+<a class="med">Ответы в начатых темах</a>
+</div>
+</div>
+</div>
+
+<div id="page_content">
+<table style="width: 100%; border: none;">
+<tr>
+<td id="main_content">
+<div id="main_content_wrap">
+
+<script>
+$(function () {
+		BB.initMagnetLinks();
+	});
+</script>
+<script>
+(function () {
+	var loadedText = {};
+
+	ajax.view_post = function (post_id) {
+		if (loadedText[post_id] != null) {
+			$('#ptx-' + post_id).toggle();
+			return;
+		}
+		ajax.exec({
+			action: 'view_post',
+			post_id: post_id,
+			mode: 'text',
+		});
+	};
+	ajax.callback.view_post = function (data) {
+		loadedText[data.post_id] = true;
+		$('#p-' + data.post_id).prepend(
+			'<textarea id="ptx-' + data.post_id + '" style="width: 99%; height: 200px;">' + data['post_text'] + '</textarea>'
+		);
+	};
+})();
+</script>
+<table class="w100">
+<tr>
+<td class="w100 vBottom pad_2">
